@@ -1,0 +1,134 @@
+@font-face {
+    font-family: inconsolata;
+    src: url(Inconsolata-Regular.ttf);
+}
+
+
+body {
+    text-align: center;
+}
+
+h1 {
+    font-family: Helvetica, Arial, sans-serif
+}
+
+main {
+    color:rgb(255, 255, 255);
+    margin: auto;
+    font-family: inconsolata, monospace;
+}
+
+#links {
+    text-align: left
+}
+
+a[href] {
+    color: rgb(126, 124, 1);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(0, 0, 0)
+}
+
+.content {
+    margin: 0;
+    display: grid;
+    gap: 10px;  
+    grid-template-columns: repeat(9, 1fr);
+}
+
+.content div {
+    position: sticky;
+    top: 100px;
+    background-color: rgb(126, 124, 1);
+    padding: 30px;
+}
+
+@media screen and (max-height: 700px) {
+    .content div {
+        top: 70px
+    }
+}
+
+.content div:nth-child(even) {
+    background-color: black;
+}
+
+.content div:hover {
+    background-color: rgba(155, 155, 155, 1);
+    color: black
+}
+
+#projects {
+    display: flex;
+    background-color: rgb(226, 219, 1);
+    padding: 3px
+}
+
+#projects div {
+    background-color: #ffffff;
+    padding: 3px
+}
+
+.block1 {
+    grid-column: 1/4;
+}
+
+.block2 {
+    grid-column: 4/10;
+}
+
+.block3 {
+    grid-column: 1/7;
+}
+
+.block4 {
+    grid-column: 1/4;
+}
+
+.block5 {
+    grid-column: 4/6;
+}
+
+.block7 {
+    grid-column: 7/10;
+    grid-row: 2/5;
+    padding: 1px;
+}
+
+.block8 {
+    grid-column: 1/7
+}
+
+.block9 {
+    grid-column: 1/10
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 240px;
+
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -120px;
+
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
